@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="scripts/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coupon Compare</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="head-container container">
+            <div class="logo">
+                Coupon Compare
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Source</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <form action="#" name="rest_from">
+            <div class="form-restaurant">
+                <select id="sel-rest" name="restaurant" id="restaurant" value="Select a Restaurant">
+                    <option value="XX">Select a Restaurant</option>
+                    <option value="bking">Burger King</option>
+                    <option value="subway">Subway</option>
+                    <option value="redswan">RedSwan Pizza</option>
+                    <option value="pizzap">Pizza Pizza</option>
+                    <option value="mcd">McDonalds</option>
+                </select>
+
+
+                <div id="error-text">Please Select a restaurant to see its menu</div>
+            
+        </div>
+        <div id="pagesec-2" class="menu-main container">
+            <div class="accordion" onclick="accordian('section-1')">
+                <div id="changemenu" class="accordian-text">Burger</div>
+                <i class="down-arrow"></i>
+            </div>
+            <div class="menu-items" id="section-1">
+                <div>
+                    <input type="checkbox" name="sec-1" id="sc-1cb-1">
+                    <label id="change1" for="sc-1cb-1">Cheese Burger</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="sec-1" id="sc-1cb-2">
+                    <label id="change2" for="sc-1cb-2">Ham Burger</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="sec-1" id="sc-1cb-3">
+                    <label id="change3" for="sc-1cb-3">Quater Pounder BLT Burger</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="sec-1" id="sc-1cb-4">
+                    <label id="change4" for="sc-1cb-4">McDouble Burger</label>
+                </div>
+            </div>
+    
+            <div class="accordion" onclick="accordian('section-2')">
+                <div class="accordian-text">Sides</div>
+                <i class="down-arrow"></i>
+            </div>
+            <div class="menu-items" id="section-2">
+                <div>
+                    <input type="checkbox" name="sec-2" id="sc-2cb-1">
+                    <label for="sc-2cb-1">Fries</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="sec-2" id="sc-2cb-2">
+                    <label for="sc-2cb-2">Onion Rings</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="sec-2" id="sc-2cb-3">
+                    <label for="sc-2cb-3">HashBrown</label>
+                </div>
+                
+            </div>
+    
+            <div class="accordion" onclick="accordian('section-3')">
+                <div class="accordian-text">Hot Drinks</div>
+                <i class="down-arrow"></i>
+            </div>
+            <div class="menu-items" id="section-3">
+                <div>
+                    <input type="checkbox" name="sec-3" id="sc-3cb-1">
+                    <label for="sc-3cb-1">Coffee</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="sec-3" id="sc-3cb-2">
+                    <label for="sc-3cb-2">Hot Chocolate</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="sec-3" id="sc-3cb-3">
+                    <label for="sc-3cb-3">Espresso</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="sec-3" id="sc-3cb-4">
+                    <label for="sc-3cb-4">Dark Roast Coffee</label>
+                </div>
+            </div>
+
+            <div class="accordion" onclick="accordian('section-4')">
+                <div class="accordian-text">Cold Drinks</div>
+                <i class="down-arrow"></i>
+            </div>
+            <div class="menu-items" id="section-4">
+                <div>
+                    <input type="checkbox" name="sec-1" id="sc-4cb-1">
+                    <label for="sc-4cb-1">Coca Cola</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="sec-1" id="sc-4cb-2">
+                    <label for="sc-4cb-2">Dr. Pepper</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="sec-1" id="sc-4cb-3">
+                    <label for="sc-4cb-3">Coca Cola Diet</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="sec-1" id="sc-4cb-4">
+                    <label for="sc-4cb-4">Iced Tea</label>
+                </div>
+            </div>
+        </div>
+        <div id="pagesec-3" class="modal-btn-section container">
+            <button id="compare-btn">Compare Now</button>
+        </div>
+        <div id="modal-bg">
+            <div id="modal" class="modal">
+                <div class="modal-section container">
+                    <div class="close-btn"><a id="x-btn" href="#">X</a></div>
+                    <div class="price-cards">
+                        <div class="full-card">
+                            <div class="card-head">
+                                <h3>Uber Eats</h3>
+                            </div>
+                            <div class="card-disc">
+                                <select name="disc" id="disc">
+                                    <option value="XX" selected>Available Coupons</option>
+                                    <option value="c0" disabled>No Coupons Available</option>
+                                </select>
+                            </div>
+                            <div class="card-price">
+                                <div class="price-val">
+                                    <div class="val-text">Subtotal:</div>
+                                    <div class="val">&dollar;21.00</div>
+                                </div>
+                                <div class="price-val">
+                                    <div class="val-text">Promotion:</div>
+                                    <div class="val">-&dollar;0.00</div>
+                                </div>
+                                <div class="price-val">
+                                    <div class="val-text">Delivery Fee:</div>
+                                    <div class="val">&dollar;2.00</div>
+                                </div>
+                                <div class="price-val">
+                                    <div class="val-text">Taxes & Other Fee:</div>
+                                    <div class="val">&dollar;2.51</div>
+                                </div>
+                                <div class="price-val final-price">
+                                    <div class="val-text">Total:</div>
+                                    <div class="val">&dollar;25.51</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="lowest-val" class="full-card">
+                            <div class="card-head">
+                                <h3>Door Dash</h3>
+                            </div>
+                            <div class="card-disc">
+                                <select name="disc" id="disc">
+                                    <option value="XX" selected>Available Coupons</option>
+                                    <option value="c0" disabled>No Coupons Available</option>
+                                </select>
+                            </div>
+                            <div class="card-price">
+                                <div class="price-val">
+                                    <div class="val-text">Subtotal:</div>
+                                    <div class="val">&dollar;21.00</div>
+                                </div>
+                                <div class="price-val">
+                                    <div class="val-text">Promotion:</div>
+                                    <div class="val">-&dollar;0.00</div>
+                                </div>
+                                <div class="price-val">
+                                    <div class="val-text">Delivery Fee:</div>
+                                    <div class="val">&dollar;2.51</div>
+                                </div>
+                                <div class="price-val">
+                                    <div class="val-text">Taxes & Other Fee:</div>
+                                    <div class="val">&dollar;2.51</div>
+                                </div>
+                                <div class="price-val final-price">
+                                    <div class="val-text">Total:</div>
+                                    <div class="val">&dollar;2.51</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="full-card">
+                            <div class="card-head">
+                                <h3>Skip</h3>
+                            </div>
+                            <div class="card-disc">
+                                <select name="disc" id="disc">
+                                    <option value="XX" selected>Available Coupons</option>
+                                    <option value="c0" disabled>No Coupons Available</option>
+                                </select>
+                            </div>
+                            <div class="card-price">
+                                <div class="price-val">
+                                    <div class="val-text">Subtotal:</div>
+                                    <div class="val">&dollar;21.00</div>
+                                </div>
+                                <div class="price-val">
+                                    <div class="val-text">Promotion:</div>
+                                    <div class="val">-&dollar;0.00</div>
+                                </div>
+                                <div class="price-val">
+                                    <div class="val-text">Delivery Fee:</div>
+                                    <div class="val">&dollar;2.51</div>
+                                </div>
+                                <div class="price-val">
+                                    <div class="val-text">Taxes & Other Fee:</div>
+                                    <div class="val">&dollar;2.51</div>
+                                </div>
+                                <div class="price-val final-price">
+                                    <div class="val-text">Total:</div>
+                                    <div class="val">&dollar;2.51</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="saved-val">You have Saved &dollar;<span>00</span> Today</div>
+                </div>
+            </div>
+        </div>
+        </form>
+    </main>
+    <footer>
+        <div class="footer-section container">
+            <div class="copy-text">
+                Copyright | All Rights Reserved 2024
+            </div>
+            <div class="owner">
+                <a href="#">Dhruv Shah</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
