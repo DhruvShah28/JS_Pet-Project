@@ -15,10 +15,10 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                <!--<li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Source</a></li>
+                    <li><a href="#">Contact</a></li> -->
+                    <li><a href="#">Compare prices of you favorite meals over different food ordering Apps.</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,6 +26,8 @@
     <main>
         <form action="#" name="rest_from">
             <div class="form-restaurant">
+                <label id="rest_head" for="restaurant">To see Menu, Select a Restaurant</label>
+
                 <select id="sel-rest" name="restaurant" id="restaurant" value="Select a Restaurant">
                     <option value="XX">Select a Restaurant</option>
                     <option value="bking">Burger King</option>
@@ -34,7 +36,6 @@
                     <option value="pizzap">Pizza Pizza</option>
                     <option value="mcd">McDonalds</option>
                 </select>
-
 
                 <div id="error-text">Please Select a restaurant to see its menu</div>
             
@@ -144,13 +145,13 @@
                             <div class="card-disc">
                                 <select name="disc" id="disc">
                                     <option value="XX" selected>Available Coupons</option>
-                                    <option value="c0" disabled>No Coupons Available</option>
+                                    <option value="c0">Welcome15</option>
                                 </select>
                             </div>
                             <div class="card-price">
                                 <div class="price-val">
                                     <div class="val-text">Subtotal:</div>
-                                    <div class="val">&dollar;21.00</div>
+                                    <div class="val">&dollar;20:00</div>
                                 </div>
                                 <div class="price-val">
                                     <div class="val-text">Promotion:</div>
@@ -166,11 +167,11 @@
                                 </div>
                                 <div class="price-val final-price">
                                     <div class="val-text">Total:</div>
-                                    <div class="val">&dollar;25.51</div>
+                                    <div class="val">&dollar;<span id="randomval-1"></span></div>
                                 </div>
                             </div>
                         </div>
-                        <div id="lowest-val" class="full-card">
+                        <div class="full-card">
                             <div class="card-head">
                                 <h3>Door Dash</h3>
                             </div>
@@ -199,7 +200,7 @@
                                 </div>
                                 <div class="price-val final-price">
                                     <div class="val-text">Total:</div>
-                                    <div class="val">&dollar;2.51</div>
+                                    <div class="val">&dollar;<span id="randomval-2"></span></div>
                                 </div>
                             </div>
                         </div>
@@ -232,12 +233,12 @@
                                 </div>
                                 <div class="price-val final-price">
                                     <div class="val-text">Total:</div>
-                                    <div class="val">&dollar;2.51</div>
+                                    <div class="val">&dollar;<span id="randomval-3"></span></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="saved-val">You have Saved &dollar;<span>00</span> Today</div>
+                    <div class="saved-val">You have Saved &dollar;<span id="saved_amt">00</span> Today</div>
                 </div>
             </div>
         </div>
